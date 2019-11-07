@@ -1,13 +1,24 @@
-import React from "react";
+import React, {Component} from 'react'
+import SceneContainer from "./SceneContainer";
 
-const MiddleContainer = props => {
-  return <div style={middleContainer} />;
+export default class MiddleContainer extends Component {
+  constructor(props){
+    super(props)
+  }
+
+  render(){
+    return <div style={styles.middleContainer}>
+      <SceneContainer/>
+    </div>
+
+  }
+
+}
+
+const styles = {
+  middleContainer: {
+    display: "inline",
+    width: "70%",
+    height: "100%",
+  }
 };
-
-const middleContainer = {
-  display: "inline",
-  width: "50%",
-  height: "100%",
-};
-
-export default MiddleContainer;

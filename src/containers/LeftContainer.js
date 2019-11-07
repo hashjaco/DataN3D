@@ -8,9 +8,9 @@ const leftContainer = {
   display: "inline-block",
   left: 0,
   height: "100%",
-  width: "25%",
+  width: "15%",
   borderRightStyle: "solid",
-  borderColor: "#212529",
+  borderColor: "#343a40",
   borderWidth: .5
 };
 

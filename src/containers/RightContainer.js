@@ -5,10 +5,10 @@ const RightContainer = props => {
 };
 
 const rightContainer = {
-  width: "25%",
+  width: "15%",
   height: "100%",
   borderLeftStyle: "solid",
-  borderColor: "#212529",
+  borderColor: "#343a40",
   borderWidth: .5,
   right: 0
 };

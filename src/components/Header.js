@@ -21,15 +21,14 @@ const styles = {
     display: "block",
     top: 0,
     flex: 1,
-    width: "100vw",
     height: "8vh",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#000"
+    backgroundColor: "#343a40"
   },
   title: {
-    fontSize: 45,
+    fontSize: 26,
+    marginLeft: 10,
     color: "#f3f3f3",
-    fontWeight: "bold",
   }
 }

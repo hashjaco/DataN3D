@@ -2,37 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2bdfc84-4558-46ef-aeb0-bcfa40e547cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ListSection.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Navigation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SearchField.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/InformationContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/LeftContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/ListContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/MiddleContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/RightContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/containers/SceneContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/About/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/About/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Jackie/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Jackie/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Marlon/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Marlon/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/Home/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Scene.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scene.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/LeftContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LeftContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/MiddleContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MiddleContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/RightContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/RightContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/SceneContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/SceneContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/AboutUs/Hashim/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -136,7 +113,8 @@
       <workItem from="1572245929514" duration="592000" />
       <workItem from="1572306015048" duration="642000" />
       <workItem from="1572943778177" duration="12328000" />
-      <workItem from="1573141724906" duration="2523000" />
+      <workItem from="1573141724906" duration="5103000" />
+      <workItem from="1573155925164" duration="725000" />
     </task>
     <servers />
   </component>

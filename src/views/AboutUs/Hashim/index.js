@@ -11,7 +11,7 @@ export default class Hashim extends Component {
   render() {
     return (
       <div>
-        <Header title="Hashim" />
+
       </div>
     );
   }
