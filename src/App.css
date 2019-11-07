@@ -1,9 +1,10 @@
+
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
+  margin: 0;
+  top: 0;
+  clear: both;
 }
 
 .App-header {
@@ -19,4 +20,11 @@
 
 .App-link {
   color: #09d3ac;
+}
+
+.MainContent {
+  display: flex;
+  flex: 1;
+  width: 100vw;
+  height: 93vh;
 }
