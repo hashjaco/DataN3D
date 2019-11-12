@@ -8,7 +8,7 @@ export default class MiddleContainer extends Component {
 
   render(){
     return <div style={styles.middleContainer}>
-      <SceneContainer/>
+      <SceneContainer />
     </div>
 
   }

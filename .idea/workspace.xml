@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2bdfc84-4558-46ef-aeb0-bcfa40e547cd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/containers/SceneContainer/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/containers/SceneContainer/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/navigation/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/Test/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Scene.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Scene.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/LeftContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LeftContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/MiddleContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/MiddleContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/RightContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/RightContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/SceneContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/SceneContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/AboutUs/Hashim/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/SceneContainer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -63,7 +70,7 @@
   <component name="PropertiesComponent">
     <property name="JavaScriptWeakerCompletionTypeGuess" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/data" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -78,7 +85,13 @@
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/data" />
+      <recent name="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views/Test" />
+      <recent name="$PROJECT_DIR$/src/containers/SceneContainer" />
       <recent name="$PROJECT_DIR$/src/containers" />
       <recent name="$PROJECT_DIR$/src/containers/LeftContainer" />
     </key>
@@ -114,7 +127,9 @@
       <workItem from="1572306015048" duration="642000" />
       <workItem from="1572943778177" duration="12328000" />
       <workItem from="1573141724906" duration="5103000" />
-      <workItem from="1573155925164" duration="725000" />
+      <workItem from="1573155925164" duration="4613000" />
+      <workItem from="1573281809229" duration="11136000" />
+      <workItem from="1573447038276" duration="21160000" />
     </task>
     <servers />
   </component>

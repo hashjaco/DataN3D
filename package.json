@@ -4,19 +4,23 @@
   "private": true,
   "dependencies": {
     "@reach/router": "^1.2.1",
-    "antd": "^3.23.6",
+    "antd": "^3.25.1",
     "bootstrap": "^4.3.1",
-    "prettier": "^1.18.2",
-    "react": "^16.10.2",
+    "prettier": "^1.19.1",
+    "react": "^16.11.0",
     "react-bootstrap": "^1.0.0-beta.14",
-    "react-dom": "^16.10.2",
-    "react-redux": "^7.1.1",
+    "react-dom": "^16.11.0",
+    "react-redux": "^7.1.3",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
+    "react-three-fiber": "^3.0.13",
+    "react-use-gesture": "^6.0.14",
+    "react-window": "^1.8.5",
     "redux": "^4.0.4",
-    "sequelize": "^5.19.3",
+    "sequelize": "^5.21.2",
     "three": "^0.109.0",
-    "typescript": "^3.6.3"
+    "three-orbit-controls": "^82.1.0",
+    "typescript": "^3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -40,7 +44,7 @@
     ]
   },
   "devDependencies": {
-    "core-js": "^3.2.1",
-    "eslint": "^6.5.1"
+    "core-js": "^3.4.0",
+    "eslint": "^6.6.0"
   }
 }

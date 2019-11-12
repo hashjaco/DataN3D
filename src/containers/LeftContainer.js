@@ -1,17 +1,18 @@
 import React from "react";
 
 const LeftContainer = props => {
-  return <div style={leftContainer} />;
+  return <div style={styles.leftContainer} />;
 };
 
-const leftContainer = {
-  display: "inline-block",
-  left: 0,
-  height: "100%",
-  width: "15%",
-  borderRightStyle: "solid",
-  borderColor: "#343a40",
-  borderWidth: .5
+const styles = {
+  leftContainer: {
+    display: "inline-block",
+    height: "100%",
+    borderRightStyle: "solid",
+    borderColor: "#343a40",
+    borderWidth: 0.5,
+    width: "20%"
+  }
 };
 
 export default LeftContainer;

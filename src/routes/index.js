@@ -7,6 +7,8 @@ import AboutUs from "../views/AboutUs";
 import Jackie from "../views/AboutUs/Jackie";
 import Marlon from "../views/AboutUs/Marlon";
 import Hashim from "../views/AboutUs/Hashim";
+import Test from "../views/Test";
+import Test2 from "../views/Test2";
 
 const Routes = () => {
   return (

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import * as THREE from "three";
 import LeftContainer from "../../containers/LeftContainer";
 import "../../App.css";
-
 const dataArray = require("../../data/spiral");
 const OrbitControls = require("three-orbit-controls")(THREE);
 
@@ -12,7 +11,7 @@ const screenHeight = window.innerHeight;
 const sceneWidth = screenWidth * 0.75;
 const sceneHeight = screenHeight * 0.8;
 
-class Home extends Component {
+class Test2 extends Component {
   constructor(props) {
     super(props);
 
@@ -20,7 +19,6 @@ class Home extends Component {
     this.stop = this.stop.bind(this);
     this.animate = this.animate.bind(this);
     this.mapDataTo3Dscene = this.mapDataTo3Dscene.bind(this);
-    this.onWindowResize = this.onWindowResize.bind(this);
   }
 
   componentDidMount() {
@@ -42,12 +40,8 @@ class Home extends Component {
     // Grid start
     const gridSize = 400;
     const divisions = 50;
-    var gridX = new THREE.GridHelper(gridSize, divisions);
-    var gridY = new THREE.GridHelper(gridSize, divisions);
-    var gridZ = new THREE.GridHelper(gridSize, divisions);
-    // gridZ.rotateZ(90);
-    gridZ.rotateX(80);
-    scene.add( gridX, gridY, gridZ );
+    var grid = new THREE.GridHelper(gridSize, divisions);
+    scene.add( grid );
 
     // Axes start
     const axisSize = 200;
@@ -73,16 +67,7 @@ class Home extends Component {
     this.cube = cube;
 
     this.mount.appendChild(this.renderer.domElement);
-
-    window.addEventListener( 'resize', this.onWindowResize, false );
-
     this.start();
-  }
-
-  onWindowResize() {
-    this.camera.aspect = this.mount.clientWidth / this.mount.clientHeight;
-    this.camera.updateProjectionMatrix();
-    this.renderer.setSize( window.innerWidth*.75, window.innerHeight*.7 );
   }
 
   componentWillUnmount() {
@@ -111,17 +96,12 @@ class Home extends Component {
   // This function will map any array of data points to our interactive grid
   mapDataTo3Dscene(dataArray, scene) {
     var dataGeometry = new THREE.Geometry();
-    var max = 0;
-    var min = 0;
     dataArray.map(data => {
-      if (data.z*15 < min) min = data.z*15;
-      if (data.z*15 > max) max = data.z*15;
       var point = new THREE.Vector3(data.x * 15, data.y * 15, data.z * 15);
       dataGeometry.vertices.push(point);
     });
     var dataMaterial = new THREE.PointsMaterial({ color: 0xffffff });
     var dataMap = new THREE.Points(dataGeometry, dataMaterial);
-    dataMap.position.z = 0 - (max + min) / 2;
     scene.add(dataMap);
   }
 
@@ -135,7 +115,7 @@ class Home extends Component {
         <LeftContainer style={{ display: "inline-block", left: 0 }}
         />
         <div
-          style={{ width: "75%", height: "80%", display: "inline-block", top: "auto",
+          style={{ width: sceneWidth, height: sceneHeight, display: "inline-block", top: "auto",
             margin: 0,
             position: "absolute" }}
           ref={mount => {
@@ -147,4 +127,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Test2;
