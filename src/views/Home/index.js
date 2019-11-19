@@ -1,150 +1,209 @@
-import React, { Component } from "react";
-import * as THREE from "three";
-import LeftContainer from "../../containers/LeftContainer";
-import "../../App.css";
+import React, { Component } from 'react'
+import * as THREE from 'three'
+import LeftContainer from '../../containers/LeftContainer'
+import '../../App.css'
 
-const dataArray = require("../../data/spiral");
-const OrbitControls = require("three-orbit-controls")(THREE);
+const dataArray = require('../../data/spiral')
+const OrbitControls = require('three-orbit-controls')(THREE)
 
-const screenWidth = window.innerWidth;
-const screenHeight = window.innerHeight;
+const screenWidth = window.innerWidth
+const screenHeight = window.innerHeight
 
-const sceneWidth = screenWidth * 0.75;
-const sceneHeight = screenHeight * 0.8;
+const sceneWidth = screenWidth * 0.75
+const sceneHeight = screenHeight * 0.8
+
+const sketch = ({ context }) => {
+  // Create the renderer
+  const renderer = new THREE.WebGLRenderer({
+    canvas: context.canvas
+  })
+
+  // Set a nice background color
+  renderer.setClearColor('#FFEEE4', 1)
+
+  // Time for the cam setup
+  const camera = new THREE.PerspectiveCamera(50, 1, 0.01, 100)
+  camera.position.set(0, 0, -4)
+  camera.lookAt(new THREE.Vector3())
+
+  // Setting up camera controller
+  const controls = new OrbitControls(camera, context.canvas)
+
+  // Setup the Scene
+  const scene = new THREE.Scene()
+
+  // Geometry Setup
+  const geometry = new THREE.SphereGeometry(1, 32, 16)
+
+  // Material Setup
+  const material = new THREE.MeshBasicMaterial({
+    color: '#6E7783'
+  })
+
+  // Mesh
+  const mesh = new THREE.Mesh(geometry, material)
+  scene.add(mesh)
+
+  // return each drawn frame
+  return {
+    // Handle Resize events
+    resize({ pixelRatio, viewportWidth, viewportHeight }) {
+      renderer.setPixelRatio(pixelRatio)
+      renderer.setSize(pixelRatio)
+      camera.aspect = viewportWidth / viewportHeight
+      camera.updateProjectionMatrix()
+    },
+
+    // Update & render the scence
+    render({ time }) {
+      controls.update()
+      renderer.render(scene, camera)
+    },
+    // Clean up events
+    unload() {
+      controls.dispose()
+      renderer.dispose()
+    }
+  }
+}
 
 class Home extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.start = this.start.bind(this);
-    this.stop = this.stop.bind(this);
-    this.animate = this.animate.bind(this);
-    this.mapDataTo3Dscene = this.mapDataTo3Dscene.bind(this);
-    this.onWindowResize = this.onWindowResize.bind(this);
+    this.start = this.start.bind(this)
+    this.stop = this.stop.bind(this)
+    this.animate = this.animate.bind(this)
+    this.mapDataTo3Dscene = this.mapDataTo3Dscene.bind(this)
+    this.onWindowResize = this.onWindowResize.bind(this)
   }
 
   componentDidMount() {
-    const width = this.mount.clientWidth;
-    const height = this.mount.clientHeight;
+    const width = this.mount.clientWidth
+    const height = this.mount.clientHeight
 
     // Foundational components of the WebGL/Three.js interactive scene
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    const scene = new THREE.Scene()
+    const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000)
+    const renderer = new THREE.WebGLRenderer({ antialias: true })
 
     // Collection of 3D objects created below
     // Cube start
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: "#433F81" });
-    const cube = new THREE.Mesh(geometry, material);
+    const geometry = new THREE.BoxGeometry(1, 1, 1)
+    const material = new THREE.MeshNormalMaterial({ flatShading: true })
+    const cube = new THREE.Mesh(geometry, material)
     // scene.add(cube)
 
     // Grid start
-    const gridSize = 400;
-    const divisions = 50;
-    var gridX = new THREE.GridHelper(gridSize, divisions);
-    var gridY = new THREE.GridHelper(gridSize, divisions);
-    var gridZ = new THREE.GridHelper(gridSize, divisions);
+    const gridSize = 400
+    const divisions = 50
+    var gridX = new THREE.GridHelper(gridSize, divisions)
+    var gridY = new THREE.GridHelper(gridSize, divisions)
+    var gridZ = new THREE.GridHelper(gridSize, divisions)
     // gridZ.rotateZ(90);
-    gridZ.rotateX(80);
-    scene.add( gridX, gridY, gridZ );
+    gridZ.rotateX(80)
+    scene.add(gridX, gridY, gridZ)
 
     // Axes start
-    const axisSize = 200;
-    var axes = new THREE.AxesHelper( axisSize );
-    scene.add( axes )
+    const axisSize = 200
+    var axes = new THREE.AxesHelper(axisSize)
+    scene.add(axes)
 
     // Data mapping start: dataArray is JSON imported
-    this.mapDataTo3Dscene(dataArray, scene);
+    this.mapDataTo3Dscene(dataArray, scene)
 
-    camera.position.z = 200;
-    camera.position.x = 200;
-    camera.position.y = 200;
-    renderer.setClearColor("#000000");
-    renderer.setSize(width, height);
+    camera.position.z = 200
+    camera.position.x = 200
+    camera.position.y = 200
+    renderer.setClearColor('#000000')
+    renderer.setSize(width, height)
 
-    this.scene = scene;
-    this.camera = camera;
+    this.scene = scene
+    this.camera = camera
 
-    this.renderer = renderer;
-    this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+    this.renderer = renderer
+    this.controls = new OrbitControls(this.camera, this.renderer.domElement)
 
-    this.material = material;
-    this.cube = cube;
+    this.material = material
+    this.cube = cube
 
-    this.mount.appendChild(this.renderer.domElement);
+    this.mount.appendChild(this.renderer.domElement)
 
-    window.addEventListener( 'resize', this.onWindowResize, false );
+    window.addEventListener('resize', this.onWindowResize, false)
 
-    this.start();
+    this.start()
   }
 
   onWindowResize() {
-    this.camera.aspect = this.mount.clientWidth / this.mount.clientHeight;
-    this.camera.updateProjectionMatrix();
-    this.renderer.setSize( window.innerWidth*.75, window.innerHeight*.7 );
+    this.camera.aspect = this.mount.clientWidth / this.mount.clientHeight
+    this.camera.updateProjectionMatrix()
+    this.renderer.setSize(window.innerWidth * 0.75, window.innerHeight * 0.7)
   }
 
   componentWillUnmount() {
-    this.stop();
-    this.mount.removeChild(this.renderer.domElement);
+    this.stop()
+    this.mount.removeChild(this.renderer.domElement)
   }
 
   start() {
     if (!this.frameId) {
-      this.frameId = requestAnimationFrame(this.animate);
+      this.frameId = requestAnimationFrame(this.animate)
     }
   }
 
   stop() {
-    cancelAnimationFrame(this.frameId);
+    cancelAnimationFrame(this.frameId)
   }
 
   animate() {
-    this.cube.rotation.x += 0.01;
-    this.cube.rotation.y += 0.01;
+    this.cube.rotation.x += 0.01
+    this.cube.rotation.y += 0.01
 
-    this.renderScene();
-    this.frameId = window.requestAnimationFrame(this.animate);
+    this.renderScene()
+    this.frameId = window.requestAnimationFrame(this.animate)
   }
 
   // This function will map any array of data points to our interactive grid
   mapDataTo3Dscene(dataArray, scene) {
-    var dataGeometry = new THREE.Geometry();
-    var max = 0;
-    var min = 0;
+    var dataGeometry = new THREE.Geometry()
+    var max = 0
+    var min = 0
     dataArray.map(data => {
-      if (data.z*15 < min) min = data.z*15;
-      if (data.z*15 > max) max = data.z*15;
-      var point = new THREE.Vector3(data.x * 15, data.y * 15, data.z * 15);
-      dataGeometry.vertices.push(point);
-    });
-    var dataMaterial = new THREE.PointsMaterial({ color: 0xffffff });
-    var dataMap = new THREE.Points(dataGeometry, dataMaterial);
-    dataMap.position.z = 0 - (max + min) / 2;
-    scene.add(dataMap);
+      if (data.z * 15 < min) min = data.z * 15
+      if (data.z * 15 > max) max = data.z * 15
+      var point = new THREE.Vector3(data.x * 15, data.y * 20, data.z * 15)
+      dataGeometry.vertices.push(point)
+    })
+    var dataMaterial = new THREE.PointsMaterial({ color: 0xffffff })
+    var dataMap = new THREE.Points(dataGeometry, dataMaterial)
+    dataMap.position.z = 0 - (max + min) / 2
+    scene.add(dataMap)
   }
 
   renderScene() {
-    this.renderer.render(this.scene, this.camera);
+    this.renderer.render(this.scene, this.camera)
   }
 
   render() {
     return (
       <div className="App" style={{ height: screenHeight, width: screenWidth }}>
-        <LeftContainer style={{ display: "inline-block", left: 0 }}
-        />
+        <LeftContainer style={{ display: 'inline-block', left: 0 }} />
         <div
-          style={{ width: "75%", height: "80%", display: "inline-block", top: "auto",
+          style={{
+            width: '75%',
+            height: '80%',
+            display: 'inline-block',
+            top: 'auto',
             margin: 0,
-            position: "absolute" }}
+            position: 'absolute'
+          }}
           ref={mount => {
-            this.mount = mount;
+            this.mount = mount
           }}
         />
       </div>
-    );
+    )
   }
 }
 
-export default Home;
+export default Home
