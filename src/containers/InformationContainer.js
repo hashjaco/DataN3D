@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
-export const InformationContainer = () => {
+const InformationContainer = () => {
 
 }
+
+export default InformationContainer;

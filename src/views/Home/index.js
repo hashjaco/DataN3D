@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import * as THREE from "three";
 import LeftContainer from "../../containers/LeftContainer";
+import RightContainer from "../../containers/RightContainer";
+import InformationContainer from "../../containers/InformationContainer";
 import "../../App.css";
 
 const dataArray = require("../../data/spiral");
@@ -8,9 +10,6 @@ const OrbitControls = require("three-orbit-controls")(THREE);
 
 const screenWidth = window.innerWidth;
 const screenHeight = window.innerHeight;
-
-const sceneWidth = screenWidth * 0.75;
-const sceneHeight = screenHeight * 0.8;
 
 class Home extends Component {
   constructor(props) {
@@ -121,7 +120,8 @@ class Home extends Component {
     });
     var dataMaterial = new THREE.PointsMaterial({ color: 0xffffff });
     var dataMap = new THREE.Points(dataGeometry, dataMaterial);
-    dataMap.position.z = 0 - (max + min) / 2;
+    if (min < 0) dataMap.position.z = min;
+    // dataMap.position.z = 0 - (max + min) / 2;
     scene.add(dataMap);
   }
 
@@ -129,6 +129,7 @@ class Home extends Component {
     this.renderer.render(this.scene, this.camera);
   }
 
+  // Render our Home component
   render() {
     return (
       <div className="App" style={{ height: screenHeight, width: screenWidth }}>
