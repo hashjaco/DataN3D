@@ -34,7 +34,7 @@ class Home extends Component {
     // Collection of 3D objects created below
     // Cube start
     const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshBasicMaterial({ color: "#433F81" });
+    const material = new THREE.MeshNormalMaterial({ flatShading: true });
     const cube = new THREE.Mesh(geometry, material);
     // scene.add(cube)
 
