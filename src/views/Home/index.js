@@ -23,15 +23,16 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    const width = this.mount.clientWidth;
-    const height = this.mount.clientHeight;
+    let camera, scene, renderer;
+    const { clientWidth: width, clientHeight: height } = this.mount;
 
     // Foundational components of the WebGL/Three.js interactive scene
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    scene = new THREE.Scene();
+    camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+    renderer = new THREE.WebGLRenderer({ antialias: true });
 
     // Collection of 3D objects created below
+
     // Cube start
     const geometry = new THREE.BoxGeometry(1, 1, 1);
     const material = new THREE.MeshNormalMaterial({ flatShading: true });
@@ -45,7 +46,8 @@ class Home extends Component {
     var gridY = new THREE.GridHelper(gridSize, divisions);
     var gridZ = new THREE.GridHelper(gridSize, divisions);
     // gridZ.rotateZ(90);
-    gridZ.rotateX(80);
+    gridX.rotateX(1.571);
+    gridZ.rotateZ(1.571);
     scene.add( gridX, gridY, gridZ );
 
     // Axes start
@@ -117,12 +119,13 @@ class Home extends Component {
       if (data.z*15 > max) max = data.z*15;
       var point = new THREE.Vector3(data.x * 15, data.y * 15, data.z * 15);
       dataGeometry.vertices.push(point);
+      var dataMaterial = new THREE.PointsMaterial({ color: 0xffffff });
+      var dataMap = new THREE.Points(dataGeometry, dataMaterial);
+      if (min < 0) dataMap.position.z = min;
+      // dataMap.position.z = 0 - (max + min) / 2;
+      scene.add(dataMap);
     });
-    var dataMaterial = new THREE.PointsMaterial({ color: 0xffffff });
-    var dataMap = new THREE.Points(dataGeometry, dataMaterial);
-    if (min < 0) dataMap.position.z = min;
-    // dataMap.position.z = 0 - (max + min) / 2;
-    scene.add(dataMap);
+
   }
 
   renderScene() {

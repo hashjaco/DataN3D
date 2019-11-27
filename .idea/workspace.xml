@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f2bdfc84-4558-46ef-aeb0-bcfa40e547cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/LeftContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LeftContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Point.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Point.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,6 +17,7 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="React" />
       </list>
     </option>
   </component>
@@ -72,15 +74,16 @@
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/data" />
-      <recent name="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/views/Test" />
       <recent name="$PROJECT_DIR$/src/containers/SceneContainer" />
       <recent name="$PROJECT_DIR$/src/containers" />
       <recent name="$PROJECT_DIR$/src/containers/LeftContainer" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/data" />
+      <recent name="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -122,6 +125,7 @@
       <workItem from="1573764100083" duration="1755000" />
       <workItem from="1574362338230" duration="885000" />
       <workItem from="1574493916948" duration="238000" />
+      <workItem from="1574884318108" duration="1317000" />
     </task>
     <servers />
   </component>
