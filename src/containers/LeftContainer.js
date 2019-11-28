@@ -1,11 +1,13 @@
-import React from "react";
-import ListSection from "../components/ListSection";
+import React from 'react';
+import ListSection from '../components/ListSection';
+import ReactList from 'react-list';
 
-const data = require("../data/spiral") || [];
+const data = require('../data/spiral') || [];
 
 const LeftContainer = () => {
   return (
     <div style={styles.leftContainer}>
+      <h3>DataSet</h3>
       {data.map(context => (
         <>
           <ListSection
@@ -17,19 +19,22 @@ const LeftContainer = () => {
           />
         </>
       ))}
-      }
     </div>
   );
 };
 
 const styles = {
   leftContainer: {
-    display: "inline-block",
-    height: "100%",
-    borderRightStyle: "solid",
-    borderColor: "#343a40",
-    borderWidth: 0.5,
-    width: "20%"
+    display: 'inline-block',
+    height: '100%',
+    // borderRightStyle: 'solid',
+    // borderColor: '#343a40',
+    // borderWidth: 0.5,
+    width: '30%',
+    backgroundColor: '#dddfe6',
+    // marginLeft: 10,
+    overflowY: 'auto',
+    fontSize: 13
   }
 };
 
