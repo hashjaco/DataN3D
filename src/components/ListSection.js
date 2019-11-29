@@ -8,38 +8,10 @@ const ListSection = ({ name, dataPointX, dataPointY, dataPointZ }) => {
   return (
     <DataContainer>
       <DataCard>
-        <li
-          css={css`
-            font: bold;
-            font-size: 12px;
-          `}
-        >
-          Name: {name}
-        </li>
-        <li
-          css={css`
-            font: bold;
-            font-size: 12px;
-          `}
-        >
-          Data Point X: {dataPointX}
-        </li>
-        <li
-          css={`
-            font: bold;
-            font-size: 12px;
-          `}
-        >
-          Data Point Y: {dataPointY}
-        </li>
-        <li
-          css={css`
-            font: bold;
-            font-size: 12px;
-          `}
-        >
-          Data Point Z: {dataPointZ}
-        </li>
+        <li style={{ fontWeight: 'bold' }}>{name}</li>
+        <li>Data Point X: {dataPointX}</li>
+        <li>Data Point Y: {dataPointY}</li>
+        <li>Data Point Z: {dataPointZ}</li>
       </DataCard>
     </DataContainer>
   );
@@ -55,6 +27,8 @@ const DataContainer = styled.div`
   flex-direction: column;
   padding-left: 1em;
   margin-bottom: 7px;
+  margin-top: 10px;
+  padding-right: 6px;
   justify-content: space-evenly;
 `;
 
@@ -63,11 +37,13 @@ const DataCard = styled.article`
 
   background-color: ${list_color};
   border: 1px solid darken('white', 20%);
-  margin: 0.5em 1em 0.5em 0.5em;
+  margin: 0.5em 0.5em 0.5em 0.5em;
+  font-size: 12px;
   padding: 1em;
+  max-width: 300px;
   border-radius: 5px;
   @include box-shadow(${list_color});
-  filter: drop-shadow(0 0 0.25em 'white');
+  box-shadow: 0 7px 30px -10px rgba(150, 170, 180, 0.5);
 `;
 
 export default ListSection;
