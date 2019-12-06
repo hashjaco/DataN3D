@@ -119,10 +119,10 @@ class Home extends Component {
       var point = new THREE.Vector3(data.x * 15, data.y * 15, data.z * 15);
       dataGeometry.vertices.push(point);
       var dataMaterial = new THREE.PointsMaterial({ color: 0xffffff });
-      var dataMap = new THREE.Points(dataGeometry, dataMaterial);
-      if (min < 0) dataMap.position.z = min;
+      var dataPoint = new THREE.Points(dataGeometry, dataMaterial);
+      if (min < 0) dataPoint.position.z = min;
       // dataMap.position.z = 0 - (max + min) / 2;
-      scene.add(dataMap);
+      scene.add(dataPoint);
     });
 
   }
