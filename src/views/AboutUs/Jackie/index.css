@@ -1,0 +1,15 @@
+.bg{
+  background-image: url("https://mcdn.wallpapersafari.com/medium/99/9/t3iOcW.jpg");
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  background-position: center;
+}
+.main-text{
+  position: relative;
+  padding: 20px;
+  color: rgb(0, 153, 204);
+  background:rgba(255,255,255,0.25);
+  width: 500px;
+}
