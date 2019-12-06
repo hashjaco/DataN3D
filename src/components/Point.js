@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
+import {  } from 'react-three-fiber'
 
+const Point = props => {
 
-export default class Point extends Component {
-  constructor(props){
-    super(props)
+  const setToSelected = () => ({
 
+  })
 
-  }
+  return(
+    <mesh
+      onClick={setToSelected()}
+    >
+
+    </mesh>
+  )
 }

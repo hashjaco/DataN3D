@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, useState, useEffect, useContext } from "react";
 import * as THREE from "three";
 import LeftContainer from "../../containers/LeftContainer";
-import RightContainer from "../../containers/RightContainer";
-import InformationContainer from "../../containers/InformationContainer";
+import "../../components/three-object-controls/ObjectControls"
 import "../../App.css";
 
 const dataArray = require("../../data/spiral");
