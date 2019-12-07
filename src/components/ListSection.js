@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import {
   Accordion,
   AccordionItem,
@@ -11,36 +11,34 @@ const Divider = () => {
   return <span style={{ borderStyle: "solid", width: "100%" }} />;
 };
 
-const ListSection = ({ name, dataPointX, dataPointY, dataPointZ }) => {
+const ListSection = props => {
   // TODO styling for each DataCard is the next thing that needs to be done
-
+  let name = props.name.replace("#", "");
   return (
-    <>
-      <div style={styles.item}>
-        <Accordion>
-          <AccordionItem>
-            <AccordionItemHeading>
-              <AccordionItemButton>{name}</AccordionItemButton>
-            </AccordionItemHeading>
-            <AccordionItemPanel>
-              <ul>
-                <li>X: {dataPointX}</li>
-                <li>Y: {dataPointY}</li>
-                <li>Z: {dataPointZ}</li>
-              </ul>
-            </AccordionItemPanel>
-          </AccordionItem>
-        </Accordion>
-        <Divider />
-      </div>
-    </>
+    <div style={styles.item}>
+      <Accordion allowZeroExpanded unselectable={true}>
+        <AccordionItem>
+          <AccordionItemHeading>
+            <AccordionItemButton>{name}</AccordionItemButton>
+          </AccordionItemHeading>
+          <AccordionItemPanel>
+            <ul>
+              <li>X: {props.dataPointX}</li>
+              <li>Y: {props.dataPointY}</li>
+              <li>Z: {props.dataPointZ}</li>
+            </ul>
+          </AccordionItemPanel>
+        </AccordionItem>
+      </Accordion>
+    </div>
   );
 };
 
 const styles = {
   item: {
     flex: 1,
-    width: "100%"
+    flexDirection: 'column',
+    width: "100%",
   }
 };
 

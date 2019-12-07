@@ -15,7 +15,7 @@ export default class Navigation extends Component {
         variant="dark"
         bg="dark"
       >
-        <Navbar.Brand>Alpha Data</Navbar.Brand>
+        <Navbar.Brand style={{ fontFamily: '"Old Standard TT", serif'}}>Alpha Data</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">

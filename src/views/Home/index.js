@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect, useContext } from "react";
+import React, { Component } from "react";
 import * as THREE from "three";
 import LeftContainer from "../../containers/LeftContainer";
 import "../../components/three-object-controls/ObjectControls"
@@ -135,8 +135,7 @@ class Home extends Component {
   render() {
     return (
       <div className="App" style={{ height: screenHeight, width: screenWidth }}>
-        <LeftContainer style={{ display: "inline-block", left: 0 }}
-        />
+        <LeftContainer style={{ display: "inline-block", left: 0 }} />
         <div
           style={{ width: "75%", height: "80%", display: "inline-block", top: "auto",
             margin: 0,
