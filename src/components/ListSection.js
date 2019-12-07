@@ -1,16 +1,45 @@
-import React, { Component } from 'react'
+import React from "react";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemHeading,
+  AccordionItemButton,
+  AccordionItemPanel
+} from "react-accessible-accordion";
 
-const ListSection = ({ name, dataPointX, dataPointY, dataPointZ }) => {
+const Divider = () => {
+  return <span style={{ borderStyle: "solid", width: "100%" }} />;
+};
+
+const ListSection = props => {
   // TODO styling for each DataCard is the next thing that needs to be done
-
+  let name = props.name.replace("#", "");
   return (
-    <>
-      <li>Name: {name}</li>
-      <li>Data Point X: {dataPointX}</li>
-      <li>Data Point Y: {dataPointY}</li>
-      <li>Data Point Z: {dataPointZ}</li>
-    </>
-  )
-}
+    <div style={styles.item}>
+      <Accordion allowZeroExpanded unselectable={true}>
+        <AccordionItem>
+          <AccordionItemHeading>
+            <AccordionItemButton>{name}</AccordionItemButton>
+          </AccordionItemHeading>
+          <AccordionItemPanel>
+            <ul>
+              <li>X: {props.dataPointX}</li>
+              <li>Y: {props.dataPointY}</li>
+              <li>Z: {props.dataPointZ}</li>
+            </ul>
+          </AccordionItemPanel>
+        </AccordionItem>
+      </Accordion>
+    </div>
+  );
+};
 
-export default ListSection
+const styles = {
+  item: {
+    flex: 1,
+    flexDirection: 'column',
+    width: "100%",
+  }
+};
+
+export default ListSection;

@@ -1,0 +1,16 @@
+font-family: 'Cinzel', serif;
+font-family: 'Courgette', cursive;
+font-family: 'Satisfy', cursive;
+font-family: 'News Cycle', sans-serif;
+font-family: 'Kaushan Script', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Old Standard TT', serif;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Economica', sans-serif;
+font-family: 'Gothic A1', sans-serif;
+font-family: 'Cookie', cursive;
+font-family: 'Poiret One', cursive;
+font-family: 'Monoton', cursive;
+font-family: 'Bangers', cursive;
+font-family: 'Philosopher', sans-serif;
+font-family: 'Playfair Display SC', serif;
