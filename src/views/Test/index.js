@@ -2,15 +2,50 @@ import React, { Component, useState, useEffect, useContext } from "react";
 import * as THREE from "three";
 import { Canvas } from 'react-three-fiber'
 import LeftContainer from "../../containers/LeftContainer";
-import "../../components/three-object-controls/ObjectControls"
 import "../../App.css";
-import Point from "../../components/Point";
+// import Point from "../../components/Point";
+import { Vector3 } from "three";
+import { SphereGeometry } from "three";
+import { PointsMaterial } from "three";
 
 const dataArray = require("../../data/spiral");
 const OrbitControls = require("three-orbit-controls")(THREE);
+const ObjectControls = require("../../components/three-object-controls/ObjectControls")
 
 const screenWidth = window.innerWidth;
 const screenHeight = window.innerHeight;
+
+let selectedObject;
+var objectControls;
+
+let camera, scene, renderer;
+
+
+const Point = props => {
+
+  const { xVal, yVal, zVal } = props;
+
+  const selectMe = (e) => {
+    selectedObject = e.target;
+    objectControls = new ObjectControls(camera, renderer.domElement, e.target)
+  };
+
+  return(
+    <mesh
+      onClick={(e)=> {
+        console.log("clicked me");
+        selectMe(e);
+      }}
+      position={new Vector3(xVal, yVal, zVal)}
+      geometry={new SphereGeometry(1, 16, 16)}
+      material={new PointsMaterial({ color: 0xffffff, transparent: true })}
+    />
+  )
+};
+
+
+
+
 
 class Home extends Component {
   constructor(props) {
@@ -24,7 +59,6 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    let camera, scene, renderer;
     const { clientWidth: width, clientHeight: height } = this.mount;
 
     // Foundational components of the WebGL/Three.js interactive scene
@@ -137,7 +171,7 @@ class Home extends Component {
   render() {
     return (
       <div className="App" style={{ height: screenHeight, width: screenWidth }}>
-        <LeftContainer style={{ display: "inline-block", left: 0 }}
+        <LeftContainer style={{ display: "inline-block", left: 0, height: this.mount.clientHeight }}
         />
         <div
           style={{ width: "75%", height: "80%", display: "inline-block", top: "auto",

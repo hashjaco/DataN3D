@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2bdfc84-4558-46ef-aeb0-bcfa40e547cd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Point.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Point.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ListSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navigation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/LeftContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LeftContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/navigation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/navigation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/AboutUs/Hashim/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/AboutUs/Hashim/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/AboutUs/Jackie/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutUs/Jackie/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/AboutUs/Marlon/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/AboutUs/Marlon/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/Test/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Test/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,9 +27,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
         <option value="React" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -60,7 +71,7 @@
   <component name="PropertiesComponent">
     <property name="JavaScriptWeakerCompletionTypeGuess" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/data" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -75,16 +86,17 @@
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/data" />
+      <recent name="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="$PROJECT_DIR$/src/views/Test" />
       <recent name="$PROJECT_DIR$/src/containers/SceneContainer" />
       <recent name="$PROJECT_DIR$/src/containers" />
       <recent name="$PROJECT_DIR$/src/containers/LeftContainer" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/data" />
-      <recent name="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -127,7 +139,7 @@
       <workItem from="1574362338230" duration="885000" />
       <workItem from="1574493916948" duration="238000" />
       <workItem from="1574884318108" duration="2365000" />
-      <workItem from="1575619355119" duration="6094000" />
+      <workItem from="1575619355119" duration="28183000" />
     </task>
     <servers />
   </component>

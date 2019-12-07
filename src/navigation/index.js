@@ -21,19 +21,19 @@ export default class Navigation extends Component {
           <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/about">About</Nav.Link>
-            <NavDropdown title="About Us" id="nav-dropdown">
+            <NavDropdown title="Team" id="nav-dropdown">
               <NavDropdown.Item eventKey="/team">
                 <Link to="/team">Team</Link>
               </NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item eventKey="/team/jackie">
-                <Link to="/team/jackie">Jackie</Link>
+                <Link className="teamLink" to="/team/jackie">Jackie</Link>
               </NavDropdown.Item>
               <NavDropdown.Item eventKey="/team/marlon">
-                <Link to="/team/marlon">Marlon</Link>
+                <Link className="teamLink" to="/team/marlon">Marlon</Link>
               </NavDropdown.Item>
               <NavDropdown.Item eventKey="/team/hashim">
-                <Link to="/team/hashim">Hashim</Link>
+                <Link className="teamLink" to="/team/hashim">Hashim</Link>
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
