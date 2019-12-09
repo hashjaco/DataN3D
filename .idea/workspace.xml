@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2bdfc84-4558-46ef-aeb0-bcfa40e547cd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ListSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/LeftContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LeftContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -134,7 +132,7 @@
       <workItem from="1575753446690" duration="226000" />
       <workItem from="1575753692220" duration="3361000" />
       <workItem from="1575804522423" duration="2365000" />
-      <workItem from="1575873077739" duration="350000" />
+      <workItem from="1575873077739" duration="756000" />
     </task>
     <servers />
   </component>
