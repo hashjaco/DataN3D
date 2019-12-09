@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import * as THREE from "three";
 import LeftContainer from "../../containers/LeftContainer";
-import "../../components/three-object-controls/ObjectControls"
+import ObjectControls from "../../components/three-object-controls/ObjectControls";
 import "../../App.css";
 
 const dataArray = require("../../data/spiral");
@@ -19,6 +19,11 @@ class Home extends Component {
     this.animate = this.animate.bind(this);
     this.mapDataTo3Dscene = this.mapDataTo3Dscene.bind(this);
     this.onWindowResize = this.onWindowResize.bind(this);
+    this.controls = null
+
+    this.state = {
+      selectedObject: null,
+    }
   }
 
   componentDidMount() {
@@ -108,20 +113,32 @@ class Home extends Component {
     this.frameId = window.requestAnimationFrame(this.animate);
   }
 
+  updateObjectControls = (object) => {
+    this.controls = new ObjectControls( this.camera, this.renderer, object )
+    this.controls.setDistance(8, 200); // set min - max distance for zoom
+    this.controls.setZoomSpeed(0.5); // set zoom speed
+    this.controls.enableVerticalRotation();
+    this.controls.setMaxVerticalRotationAngle(Math.PI / 4, Math.PI / 4);
+    this.controls.setRotationSpeed(0.05);
+    console.log("state has changed")
+  }
+
   // This function will map any array of data points to our interactive grid
   mapDataTo3Dscene(dataArray, scene) {
-    var dataGeometry = new THREE.Geometry();
     var max = 0;
     var min = 0;
     dataArray.map(data => {
-      if (data.z*15 < min) min = data.z*15;
-      if (data.z*15 > max) max = data.z*15;
+      var dataGeometry = new THREE.SphereGeometry(.5,5,5);
       var point = new THREE.Vector3(data.x * 15, data.y * 15, data.z * 15);
-      dataGeometry.vertices.push(point);
-      var dataMaterial = new THREE.PointsMaterial({ color: 0xffffff });
+      // dataGeometry.vertices.push(point);
+      var dataMaterial = new THREE.PointsMaterial({ color: 0xeb4034 });
       var dataPoint = new THREE.Points(dataGeometry, dataMaterial);
-      if (min < 0) dataPoint.position.z = min;
-      // dataMap.position.z = 0 - (max + min) / 2;
+      dataPoint.position.setX(data.x*15);
+      dataPoint.position.setY(data.y*15);
+      dataPoint.position.setZ(data.z*15);
+      dataPoint.addEventListener('click', (object)=>{
+        this.updateObjectControls(object)
+      });
       scene.add(dataPoint);
     });
 

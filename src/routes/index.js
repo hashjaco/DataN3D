@@ -19,6 +19,8 @@ const Routes = () => {
       <Marlon path="/team/marlon" />
       <Jackie path="/team/jackie" />
       <Hashim path="/team/hashim" />
+      <Test path="/test" />
+      <Test2 path="/test2" />
     </Router>
   );
 };
