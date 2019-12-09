@@ -14,6 +14,7 @@ export default class Navigation extends Component {
         expand="lg"
         variant="dark"
         bg="dark"
+        style={{ width: "100%", zIndex: 2, display: 'inline-flex' }}
       >
         <Navbar.Brand style={{ fontFamily: '"Old Standard TT", serif'}}>Alpha Data</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

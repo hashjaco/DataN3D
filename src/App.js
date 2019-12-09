@@ -18,9 +18,3 @@ export default class App extends Component {
   }
 }
 
-const styles = {
-  app: {
-    flex: 1,
-    marginTop: 0
-  }
-}

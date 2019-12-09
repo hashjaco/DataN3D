@@ -25,7 +25,7 @@ const LeftContainer = () => {
 const styles = {
   leftContainer: {
     display: 'inline-block',
-    height: '100%',
+    height: "90vh",
     width: '25%',
     backgroundColor: '#dddfe6',
     overflowY: 'auto'
