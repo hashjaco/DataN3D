@@ -28,7 +28,7 @@ const DataContainer = styled.div`
   padding-left: 1em;
   margin-bottom: 7px;
   margin-top: 10px;
-  padding-right: 6px;
+  padding-right: 15px;
   justify-content: space-evenly;
 `;
 
@@ -38,7 +38,7 @@ const DataCard = styled.article`
   background-color: ${list_color};
   border: 1px solid darken('white', 20%);
   margin: 0.5em 0.5em 0.5em 0.5em;
-  font-size: 12px;
+  font-size: 11px;
   padding: 1em;
   max-width: 300px;
   border-radius: 5px;
