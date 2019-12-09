@@ -1,0 +1,7 @@
+.mesh {
+    margin: 0;
+    display: inline-block;
+    width: 50vw;
+    height: 50vh;
+    background-color: black;
+}
