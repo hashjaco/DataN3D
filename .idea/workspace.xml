@@ -2,29 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2bdfc84-4558-46ef-aeb0-bcfa40e547cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/navigation/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets/c++.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets/coverphoto.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets/figma-1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets/java-14.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets/linux-tux-1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets/linux-tux.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets/maya-2017.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets/nodejs-2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets/postgresql.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets/prettier-1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets/profilephoto.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets/react.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets/sequelize.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets/ubuntu-4.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets/unity-69.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/views/AboutUs/Hashim/assets/zaddy.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Point.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Point.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Home/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Test/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Test/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Test2/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Test2/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ListSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListSection.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/LeftContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/LeftContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -153,6 +134,7 @@
       <workItem from="1575753446690" duration="226000" />
       <workItem from="1575753692220" duration="3361000" />
       <workItem from="1575804522423" duration="2365000" />
+      <workItem from="1575873077739" duration="350000" />
     </task>
     <servers />
   </component>
