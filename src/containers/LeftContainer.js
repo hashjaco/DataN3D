@@ -4,7 +4,16 @@ import ReactList from 'react-list';
 
 const data = require('../data/spiral') || [];
 
-const LeftContainer = () => {
+const LeftContainer = (props) => {
+  const styles = {
+    leftContainer: {
+      display: 'inline-block',
+      height: props.height,
+      width: '25%',
+      backgroundColor: '#dddfe6',
+      overflowY: 'auto'
+    }
+  };
   return (
     <div style={styles.leftContainer}>
       {data.map(context => (
@@ -22,14 +31,6 @@ const LeftContainer = () => {
   );
 };
 
-const styles = {
-  leftContainer: {
-    display: 'inline-block',
-    height: "90vh",
-    width: '25%',
-    backgroundColor: '#dddfe6',
-    overflowY: 'auto'
-  }
-};
+
 
 export default LeftContainer;

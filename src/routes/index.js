@@ -7,8 +7,6 @@ import AboutUs from "../views/AboutUs";
 import Jackie from "../views/AboutUs/Jackie";
 import Marlon from "../views/AboutUs/Marlon";
 import Hashim from "../views/AboutUs/Hashim";
-import Test from "../views/Test";
-import Test2 from "../views/Test2";
 
 const Routes = () => {
   return (
@@ -19,8 +17,6 @@ const Routes = () => {
       <Marlon path="/team/marlon" />
       <Jackie path="/team/jackie" />
       <Hashim path="/team/hashim" />
-      <Test path="/test" />
-      <Test2 path="/test2" />
     </Router>
   );
 };

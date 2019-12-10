@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import * as THREE from "three";
 import LeftContainer from "../../containers/LeftContainer";
 import ObjectControls from "../../components/three-object-controls/ObjectControls";
+import ListSection from "../../components/ListSection";
+import DataReader from "../../components/DataReader/DataReader"
 import "./index.css";
 
 const dataArray = require("../../data/spiral");
@@ -9,18 +11,26 @@ const OrbitControls = require("three-orbit-controls")(THREE);
 
 const screenWidth = window.innerWidth;
 const screenHeight = window.innerHeight;
+const navBarHeight = 56;
+const mainSectionHeight = screenHeight - navBarHeight;
 
 var scene;
 
-class sphere {
+class sphere extends Component {
   constructor(pos) {
-    this.x_pos = pos.x;
-    this.y_pos = pos.y;
-    this.z_pos = pos.z;
+    super(pos);
+    this.state = {
+      color: 0x0000ff,
+      selected: false
+    };
+
+    this.x_pos = pos.x * 15;
+    this.y_pos = pos.y * 15;
+    this.z_pos = pos.z * 15;
     this.name = pos.name;
     let geometry = new THREE.SphereGeometry(this.RADIUS, 30, 30);
     let material = new THREE.MeshPhongMaterial({
-      color: 0x0000ff,
+      color: this.state.color,
       shininess: 100,
       side: THREE.DoubleSide
     });
@@ -41,6 +51,13 @@ class sphere {
   get_name() {
     return this.name;
   }
+
+  toggleSelected = () => {
+    this.setState({
+      selected: !this.state.selected,
+      color: this.state.selected === true ? 0xd1230d : 0x0000ff
+    });
+  };
 }
 
 class Home extends Component {
@@ -65,16 +82,19 @@ class Home extends Component {
 
     this.ADD = 0.003;
     this.theta = 0;
-    this.RADIUS = 0.1;
     this.BASE_X = 0;
     this.BASE_Y = 0;
     this.divider = 10;
 
-    this.cube = null
+    this.cube = null;
     this.spheres = [];
 
     this.state = {
-      selectedObject: null
+      selectedObject: null,
+      displayName: "",
+      displayX: "",
+      displayY: "",
+      displayZ: ""
     };
   }
 
@@ -98,13 +118,14 @@ class Home extends Component {
         );
         this.controls.update();
 
-        console.log(
-          s.get_x() + " " + s.get_y() + " " + s.get_z() + " " + s.get_name()
-        );
+        s.toggleSelected()
 
-        var div = document.getElementById("data-description");
-        div.innerHTML = "";
-        div.innerHTML = div.innerHTML + `<p>Name: ${s.get_name()}, Location: X = ${s.get_x()}, Y = ${s.get_y()}, Z = ${s.get_z()}</p>`;
+        this.setState({
+          displayName: s.get_name(),
+          displayX: s.get_x(),
+          displayY: s.get_y(),
+          displayZ: s.get_z()
+        });
       }
     });
   };
@@ -130,12 +151,35 @@ class Home extends Component {
       ", Z = " +
       this.spheres[pos].get_z() +
       "</p>";
+    // div.innerHTML =
+    //     div.innerHTML +
+    //     `<ListSection name=${this.spheres[pos].get_name()} dataPointX=${this.spheres[pos].get_x()} dataPointY=${this.spheres[pos].get_y()}} dataPointZ=${this.spheres[pos].get_z()} />`
+  };
+
+  toggleSelected = pos => {
+    this.spheres[pos].toggleSelected();
+  };
+
+  load = () => {
+    var div = document.getElementById("data-points-wrapper");
+    for (var i = 0; i < dataArray.length / this.divider; i++) {
+      div.innerHTML =
+        div.innerHTML +
+        `<button class='inner' id=${i}>${dataArray[i].name}</button><br>`;
+    }
+
+    var buttons = document.getElementsByTagName("button");
+    var buttonsCount = buttons.length;
+    for (var i = 0; i < buttonsCount; i++) {
+      buttons[i].onclick = function(e) {
+        this.focusCamera(this.id);
+        this.toggleSelected(this.id);
+      };
+    }
   };
 
   componentDidMount() {
-    // let camera, scene, renderer, light1, rayCast, mouse, controls, container;
     const { clientWidth: width, clientHeight: height } = this.mount;
-    // this.spheres = [];
     this.ADD = 0.003;
     this.theta = 0;
     this.RADIUS = 0.1;
@@ -147,7 +191,7 @@ class Home extends Component {
     scene = new THREE.Scene();
     scene.background = new THREE.Color(0xababab);
     this.camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
-    this.camera.position.set(5, 5, 25);
+    this.camera.position.set(200, 100, 25);
 
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
 
@@ -168,7 +212,6 @@ class Home extends Component {
 
     document.addEventListener("click", this.onMouseClick, false);
 
-
     // Collection of 3D objects created below
 
     // Cube start
@@ -178,7 +221,7 @@ class Home extends Component {
     // scene.add(this.cube)
 
     // Grid start
-    const gridSize = 400;
+    const gridSize = 600;
     const divisions = 50;
     var gridX = new THREE.GridHelper(gridSize, divisions);
     var gridY = new THREE.GridHelper(gridSize, divisions);
@@ -189,7 +232,7 @@ class Home extends Component {
     scene.add(gridX, gridY, gridZ);
 
     // Axes start
-    const axisSize = 200;
+    const axisSize = 500;
     var axes = new THREE.AxesHelper(axisSize);
     scene.add(axes);
 
@@ -274,28 +317,55 @@ class Home extends Component {
   renderScene() {
     this.renderer.render(scene, this.camera);
   }
-
   // Render our Home component
   render() {
     return (
-      <div className="App" style={{ height: screenHeight, width: screenWidth }}>
-        <LeftContainer style={{ display: "inline-block", left: 0 }} />
-        <div
-          style={{
-            width: "75%",
-            height: "80%",
-            display: "inline-block",
-            top: "auto",
+      <div className="App" style={{ height: mainSectionHeight, width: screenWidth }}>
+        <LeftContainer style={{ display: "inline-block", left: 0 }} height={mainSectionHeight}/>
+        <div style={{
+          width: "75%",
+          height: mainSectionHeight,
+          display: "inline-block",
+          top: 'auto',
+          margin: 0,
+          position: "absolute"
+        }}>
+          <div
+            style={{
+              width: "100%",
+              height: "75%",
+              display: "block",
+              top: 0,
+              margin: 0,
+              position: "absolute"
+            }}
+            ref={mount => {
+              this.mount = mount;
+            }}
+            onLoad={this.load}
+          />
+          <div style={{
+            flex: 1,
+            position: "absolute",
+            width: "100%",
+            height: "25%",
+            diplay: "block",
             margin: 0,
-            position: "absolute"
-          }}
-          ref={mount => {
-            this.mount = mount;
-          }}
-          onLoad={this.load}
-        />
-        <div id="data-description-container">
-          <p id="data-description" />
+            flexDirection: 'row',
+            justifyContent: 'center',
+            alignItems: 'center',
+            bottom: 0
+          }}>
+            <div id="data-description-container">
+              <ListSection
+                name={this.state.displayName}
+                dataPointX={this.state.displayX}
+                dataPointY={this.state.displayY}
+                dataPointZ={this.state.displayZ}
+              />
+            </div>
+            <DataReader id="drop-zone" />
+          </div>
         </div>
       </div>
     );

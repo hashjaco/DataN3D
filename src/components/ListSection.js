@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import { css } from '@emotion/core';
 
 const ListSection = ({ name, dataPointX, dataPointY, dataPointZ }) => {
-  // TODO styling for each DataCard is the next thing that needs to be done
 
   return (
     <DataContainer>
       <DataCard>
         <li style={{ fontWeight: 'bold' }}>{name}</li>
-        <li>Data Point X: {dataPointX}</li>
-        <li>Data Point Y: {dataPointY}</li>
-        <li>Data Point Z: {dataPointZ}</li>
+        <li>X: {dataPointX}</li>
+        <li>Y: {dataPointY}</li>
+        <li>Z: {dataPointZ}</li>
       </DataCard>
     </DataContainer>
   );
