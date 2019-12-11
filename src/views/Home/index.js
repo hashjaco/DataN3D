@@ -185,7 +185,7 @@ class Home extends Component {
     this.RADIUS = 0.1;
     this.BASE_X = 0;
     this.BASE_Y = 0;
-    this.divider = 10;
+    this.divider = 1.5;
 
     // Foundational components of the WebGL/Three.js interactive scene
     scene = new THREE.Scene();
