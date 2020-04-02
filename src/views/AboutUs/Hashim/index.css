@@ -1,0 +1,103 @@
+
+
+#coverPhoto {
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 450px;
+    background: url("./assets/coverphoto.jpg") no-repeat center;
+    background-size: cover;
+}
+
+#profile {
+    text-align: center;
+    position: absolute;
+    transform: translateY(-150px);
+    flex: 1;
+    left: 0;
+    right: 0;
+}
+
+#profile-img {
+    border-radius: 150px;
+}
+
+#profile-img:hover {
+    -webkit-animation: wiggle 1s infinite;
+    -moz-animation: wiggle 1s infinite;
+    animation: wiggle 1s infinite;
+}
+
+#main {
+    height: 300px;
+}
+
+#about {
+    float: right;
+    width: 35vw;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+#aboutContent {
+    text-indent: 30px;
+    padding: 10px;
+    line-height: 30px;
+    font-family: 'Old Standard TT', serif;
+    font-weight: bold;
+    justify-self: center;
+}
+
+#skills {
+    display: block;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: whitesmoke;
+    text-align: center;
+    width: 100%;
+    flex: 1;
+    justify-content: space-between;
+    align-content: space-evenly;
+}
+
+.technology img {
+    margin: 50px;
+    width: 150px;
+    height: 150px;
+    /*-webkit-animation:spin 10s linear infinite;*/
+    /*-moz-animation:spin 10s linear infinite;*/
+    /*animation:spin 10s linear infinite;*/
+}
+
+.technology img:hover {
+    -webkit-animation: wiggle 0.5s infinite;
+    -moz-animation: wiggle 0.5s infinite;
+    animation: wiggle 0.5s infinite;
+}
+
+.technology h5 {
+    font-family: 'Cinzel', serif;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+@-moz-keyframes wiggle {
+    0% {transform: rotate(4deg)}
+    50% {transform: rotate(-4deg)}
+    100% {transform: rotate(4deg)}
+}
+
+@-webkit-keyframes wiggle {
+    0% {-webkit-transform: rotate(4deg)}
+    50% {-webkit-transform: rotate(-4deg)}
+    100% {-webkit-transform: rotate(4deg)}
+}
+
+@keyframes wiggle {
+    0% {transform: rotate(4deg)}
+    50% {transform: rotate(-4deg)}
+    100% {transform: rotate(4deg)}
+}

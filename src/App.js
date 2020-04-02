@@ -1,12 +1,20 @@
-import React from 'react';
-import Scene from "./components/Scene";
+import React, { Component } from 'react'
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Routes from './routes'
+import Navigation from './navigation'
 
-function App() {
-  return (
-    <div className="App">
-      <Scene />
-    </div>
-  );
+export default class App extends Component {
+  constructor(props) {
+    super(props)
+  }
+  render() {
+    return (
+      <>
+        <Navigation style={{ zIndex: 1 }} />
+        <Routes />
+      </>
+    )
+  }
 }
 
-export default App;

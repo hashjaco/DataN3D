@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+      name="Alpha Data"
+      content="Web site that displays data in 3 Dimensions"
     />
     <link rel="apple-touch-icon" href="logo192.png" />
     <!--
@@ -15,6 +15,14 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <!--
+      some extra font families to choose from throughout the project
+    -->
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Bangers|Cinzel|Cookie|Courgette|Economica|Gothic+A1|Great+Vibes|Kaushan+Script|Monoton|News+Cycle|Old+Standard+TT|Orbitron|Philosopher|Playfair+Display+SC|Poiret+One|Satisfy&display=swap"
+    />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -24,7 +32,10 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Alpha Data: Visualizing Data in 3-Dimensional Space</title>
+    <script src="../src/views/Home/three.min.js"></script>
+    <script src="../src/components/ListSection.js"></script>
+    <script src="../src/views/Home/OrbitControls.js"></script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

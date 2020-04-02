@@ -1,0 +1,40 @@
+#container {
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'Old Standard TT', serif;
+    border-left: darkgray solid 1px;
+    padding: 10px;
+}
+
+#container:hover {
+    width: 50%;
+    margin: 0;
+    display: inline-block;
+    font-size: 14px;
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'Old Standard TT', serif;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#fileSelect div {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+    padding: 20px;
+}
+
+#fileSelect p {
+    width: 100%;
+}
+
+#fileSelect img {
+    height: 6em;
+}
